@@ -3,42 +3,68 @@
   <h1>Technical Onboarding Process</h1>
 </div>
 
-*As of July 2024, the technical onboarding requirement for the Microsoft Learn Student Ambassadors program is retired.* 
+### 👑 CCP & MVP(XDR & SIEM) + MLSA Communities @ Microsoft
 
-🚀 Welcome to the GitHub repository for the [Microsoft Learn Student Ambassador](http://studentambassadors.microsoft.com/) Technical Onboarding Process! This is a template repository for Student Ambassadors to use in their technical onboarding experience.
+```yaml
+Name: Shahzal Rehman 샘  
+Title: Beta MLSA | GitHub Certified | IBM Design Thinker  
+Focus: Cloud, AI, Storytelling  
+Currently: HSSC - ICS Physics @ Punjab College  
+```
 
-By completing this Technical Onboarding Process, you will:
-- 🌐 Grow your skills with Microsoft Azure
-- 🛠️ Become trained on the use of GitHub
-- 🎯 Complete one of the requirements for program advancement
-- 📜 Receive a certificate recognizing your new technical abilities!
+> 🚀 Rising Youth Influencer, Microsoft Learn Student Ambassador, GitHub Contributor, and Tech Event Organizer.
 
-As you navigate this technical onboarding, please refer to our [GitHub Discussions](https://github.com/microsoft/SATechnicalOnboarding/discussions) to ask any questions. If you encounter any issues, you can [open a GitHub Issue](https://github.com/microsoft/SATechnicalOnboarding/issues). Be sure to review other Ambassadors’ questions to help or get help!
+---
 
-> **Note:** Technical Onboarding was updated on April 18, 2023. See this [Discussions post](https://github.com/microsoft/SATechnicalOnboarding/discussions/27) for more details.
+### 🏆 GitHub Trophies
 
-## 📚 Resources for Completing the Technical Onboarding
-Start here ➡️➡️ [Technical Onboarding Instructions](https://github.com/microsoft/SATechnicalOnboarding/blob/main/technical-onboarding-instructions.md)
+[![trophy](https://github-profile-trophy.vercel.app/?username=Shahzal-Rehman&theme=onedark&margin-w=10&no-frame=true)](https://github.com/Shahzal-Rehman)
 
-For troubleshooting, check out our [Technical Onboarding Troubleshooting Guide](https://github.com/microsoft/SATechnicalOnboarding/blob/main/troubleshooting-guide.md).
+---
 
-## 📘 Suggested Materials for Learning About GitHub
-- [Introduction to GitHub](https://docs.microsoft.com/learn/modules/introduction-to-github/)
-- [Upload your project by using GitHub best practices](https://docs.microsoft.com/learn/modules/upload-project-github/)
-- [Communicate Effectively on GitHub by using Markdown](https://docs.microsoft.com/learn/modules/communicate-using-markdown/)
+### 🧰 Toolbox
 
-## 📂 Additional Resources
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=html,css,js,react,tailwind,nodejs,mongodb,python,azure,github,figma,vscode,linux" />
+</p>
 
-| Resource | Link |
-|---|---|
-| Manage repository changes by using pull requests on GitHub | [Learn More](https://docs.microsoft.com/learn/modules/manage-changes-pull-requests-github/) |
-| JavaScript for Beginners Video | [Watch Video](https://www.youtube.com/watch?v=_EDM5aPVLmo&list=PLlrxD0HtieHhW0NCG7M536uHGOtJ95Ut2) |
-| Static Web Apps Video | [Watch Video](https://docs.microsoft.com/shows/azure-tips-and-tricks-static-web-apps/) |
-| Manage Git branches and workflows | [Learn More](https://docs.microsoft.com/learn/modules/manage-git-branches-workflows/) |
-| Settle competing commits by using merge conflict resolution on GitHub | [Learn More](https://learn.microsoft.com/training/modules/resolve-merge-conflicts-github/?WT.mc_id=%3Fwt.mc_id%3Dstudentamb_260352) |
-| Build and deploy applications to Azure by using GitHub Actions | [Learn More](https://learn.microsoft.com/training/modules/github-actions-cd/?WT.mc_id=%3Fwt.mc_id%3Dstudentamb_260352) |
-| Manage Source Control Learning Path | [Learn More](https://learn.microsoft.com/training/paths/az-400-manage-source-control/?WT.mc_id=%3Fwt.mc_id%3Dstudentamb_260352) |
-| GitHub Copilot: Your AI pair programmer | [Learn More](https://learn.microsoft.com/training/paths/copilot/?WT.mc_id=%3Fwt.mc_id%3Dstudentamb_260352) |
+---
 
-## 🎉 Thank You for Completing the Technical Onboarding!
-If you would like to provide feedback or suggestions, please [open a GitHub Issue](https://github.com/microsoft/SATechnicalOnboarding/issues/new/choose). We look forward to your suggestions! 😊
+### 📊 GitHub Stats
+
+<div align="center">
+
+![Stats](https://github-readme-stats.vercel.app/api?username=Shahzal-Rehman&theme=tokyonight&show_icons=true&count_private=true&hide_border=true)
+
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Shahzal-Rehman&layout=compact&theme=tokyonight&hide_border=true)
+
+</div>
+
+---
+### 📣 Let's Discuss Biography!
+His Excellency is standing out in a crowd of over ~1.53k students at his college. Balancing school life with his passions, Shahzal is already making waves both on stage and in the community.
+His Education?
+Currently studying HSSC-ICS-Physics (2023–2025) at Punjab Group of Colleges, and having completed SSC-Bio (2021–2023) at Fauji Foundation School, Shahzal brings focus and dedication to everything he does. Beyond academics, he’s well-known for his engaging presence, whether he’s leading events, telling stories, or inspiring his peers.
+His Tech Achievements?
+Though young, Shahzal has achieved remarkable recognition as the youngest 5x Microsoft CCP awardee of the year 2025 and holds the prestigious Defender XDR Black Belt from Microsoft — accomplishments that add a unique edge to his creative journey. As a MSFT SA (Beta) and GitHub Certified professional, along with various other credentials, he has made a significant impact on both the international and local levels.
+His mission?
+He’s passionate about challenging norms and using his voice — on screen and off — to inspire change and connect with people. Whether in front of the camera or engaging an audience, Shahzal believes in making every moment count and creating positive impact wherever he goes.
+When he’s not acting or influencing, you’ll find him sharing stories, connecting with friends, or simply enjoying life as a vibrant young leader in his community.
+✨ He is here for you; 
+▶️ youtube.com/iamshahzal
+ 📸 instagram.com/iamshahzal
+🔗linkedin.com/in/iamshahzal
+ⓕ facebook.com/iamshahzal
+ⓕ facebook.com/ShahzalTribe
+ⓕ facebook.com/RehmanTribe2024
+「✨Shahzal Rehman ke saath ✨」
+ ✦-- GitHub | AWS | IBM | MLSA, CCP @ MSFT | Creds -----✦ credly.com/users/shahzal-rehman
+
+---
+### 📣 Let's Connect!
+
+> 🔗 **Explore, Collaborate, Impact.**  
+> 📡 Drop by or ping me on socials.  
+> 💬 DMs always open for open-source collabs, tech talks, or design help!
+
+---
