@@ -1,12 +1,218 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Neon Pixel Runner</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Super Golden Dragon Jump</title>
+<style>
+  /* Background & container */
+  body {
+    margin: 0;
+    background: #111;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    user-select: none;
+  }
+
+  #game {
+    position: relative;
+    width: 800px;
+    height: 300px;
+    margin: 40px auto;
+    background: linear-gradient(90deg, #222 0%, #111 100%);
+    border: 3px solid #ffaa00;
+    border-radius: 12px;
+    box-shadow: 0 0 20px 6px #ffdd55;
+    overflow: hidden;
+  }
+
+  /* Ground */
+  #ground {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background: #443300;
+    box-shadow: 0 0 25px 4px #ffdd33 inset;
+  }
+
+  /* Dragon */
+  #dragon {
+    position: absolute;
+    bottom: 50px;
+    left: 80px;
+    width: 60px;
+    height: 40px;
+    background: linear-gradient(45deg, #ffd800, #ffb300);
+    border-radius: 30% / 50%;
+    box-shadow:
+      0 0 12px 4px #ffdd55,
+      inset 0 0 20px 6px #fff07a;
+    animation: flap 0.6s infinite ease-in-out;
+    transition: bottom 0.2s ease-out;
+  }
+
+  /* Flapping wings effect */
+  @keyframes flap {
+    0%, 100% { transform: scaleY(1); }
+    50% { transform: scaleY(0.9) translateY(-2px); }
+  }
+
+  /* Obstacle */
+  .obstacle {
+    position: absolute;
+    bottom: 50px;
+    width: 30px;
+    height: 60px;
+    background: linear-gradient(45deg, #ffdd00, #ffaa00);
+    border-radius: 8px;
+    box-shadow:
+      0 0 15px 4px #ffcc00,
+      inset 0 0 10px 3px #ffe34d;
+    animation: moveLeft linear forwards;
+  }
+
+  /* Score */
+  #score {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #ffdd55;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 0 0 10px #fff47c;
+    user-select: none;
+  }
+
+  /* Jump key hint */
+  #hint {
+    position: absolute;
+    bottom: 70px;
+    left: 20px;
+    color: #ffcc22;
+    font-size: 14px;
+    font-weight: 600;
+    text-shadow: 0 0 6px #ffaa00;
+  }
+</style>
 </head>
 <body>
-  <canvas id="gameCanvas" width="800" height="400"></canvas>
-  <script src="game.js"></script>
+
+<div id="game">
+  <div id="dragon"></div>
+  <div id="ground"></div>
+  <div id="score">Score: 0</div>
+  <div id="hint">Press SPACE or ↑ to jump</div>
+</div>
+
+<script>
+  const game = document.getElementById('game');
+  const dragon = document.getElementById('dragon');
+  const scoreEl = document.getElementById('score');
+
+  let isJumping = false;
+  let jumpHeight = 0;
+  let jumpSpeed = 0;
+  let gravity = 0.7;
+  let dragonBottom = 50; // px above ground
+  let score = 0;
+  let gameOver = false;
+
+  // Jump function
+  function jump() {
+    if (!isJumping) {
+      isJumping = true;
+      jumpSpeed = 15;
+    }
+  }
+
+  // Create obstacles dynamically
+  function createObstacle() {
+    if(gameOver) return;
+
+    const obstacle = document.createElement('div');
+    obstacle.classList.add('obstacle');
+    game.appendChild(obstacle);
+
+    let obstacleLeft = game.offsetWidth;
+    obstacle.style.left = obstacleLeft + 'px';
+
+    const obstacleSpeed = 6 + score / 50; // Increase speed slightly with score
+
+    function moveObstacle() {
+      if (gameOver) {
+        obstacle.remove();
+        return;
+      }
+
+      obstacleLeft -= obstacleSpeed;
+      obstacle.style.left = obstacleLeft + 'px';
+
+      // Collision detection
+      const dragonRect = dragon.getBoundingClientRect();
+      const obstacleRect = obstacle.getBoundingClientRect();
+      const gameRect = game.getBoundingClientRect();
+
+      if (
+        obstacleLeft < 150 && obstacleLeft > 80 && 
+        dragonBottom < obstacle.offsetHeight + 50
+      ) {
+        endGame();
+      }
+
+      if (obstacleLeft < -obstacle.offsetWidth) {
+        score++;
+        scoreEl.textContent = 'Score: ' + score;
+        obstacle.remove();
+        return;
+      }
+
+      requestAnimationFrame(moveObstacle);
+    }
+
+    moveObstacle();
+
+    // Spawn next obstacle randomly between 1 to 2.5 seconds
+    const nextTime = 1000 + Math.random() * 1500;
+    setTimeout(createObstacle, nextTime);
+  }
+
+  function endGame() {
+    gameOver = true;
+    alert('🔥 Game Over! Your score: ' + score + ' 🔥');
+    window.location.reload();
+  }
+
+  // Game loop for jump physics
+  function gameLoop() {
+    if (isJumping) {
+      jumpHeight += jumpSpeed;
+      jumpSpeed -= gravity;
+
+      if (jumpHeight <= 0) {
+        jumpHeight = 0;
+        isJumping = false;
+      }
+    }
+
+    dragonBottom = 50 + jumpHeight;
+    dragon.style.bottom = dragonBottom + 'px';
+
+    requestAnimationFrame(gameLoop);
+  }
+
+  // Controls
+  window.addEventListener('keydown', e => {
+    if ((e.code === 'Space' || e.code === 'ArrowUp') && !gameOver) {
+      e.preventDefault();
+      jump();
+    }
+  });
+
+  // Start game
+  createObstacle();
+  gameLoop();
+</script>
+
 </body>
 </html>
